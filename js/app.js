@@ -1,5 +1,5 @@
 fs = require("fs")
-var woolfApp = angular.module('woolfApp', ['ui.router']);
+var woolfApp = angular.module('woolfApp', ['ui.router'])
 
 woolfApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('root', {
@@ -179,13 +179,13 @@ woolfApp.controller('woolfController', function woolfController($scope, $state, 
 
   // db.serialize(function() {
   //   db.run("CREATE TABLE lorem (info TEXT)");
-   
+
   //   var stmt = db.prepare("INSERT INTO lorem VALUES (?)");
   //   for (var i = 0; i < 10; i++) {
   //       stmt.run("Ipsum " + i);
   //   }
   //   stmt.finalize();
-   
+
   //   db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
   //       console.log(row.id + ": " + row.info);
   //   });

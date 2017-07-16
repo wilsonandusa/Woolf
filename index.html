@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html  ng-app="woolfApp">
   <head>
-    <title>Woolf</title>
+    <title>👩🏻‍⚕️goodfellas👨🏻‍⚕️</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/photon.css">
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/component.css">
 
     <!-- External Javascript -->
     <script src="./bower_components/angular/angular.js"></script>
@@ -17,15 +19,30 @@
     <script src="./js/common.js" charset="utf-8"></script>
     <script src="./js/markdown.js"></script>
     <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/function.js"></script>
 
   </head>
   <body ng-controller="woolfController">
     <div class="window">
+      <div class = 'function_section'>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input id="search" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button"
+                onclick='{google()}'>Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="window-content">
+
         <div class="pane-group">
           <div class="pane pane-sm sidebar">
             <ul class="list-group">
-              <!-- 
+              <!--
               <li class="list-group-header">
                 <input class="form-control" type="text" placeholder="Search for anything.">
               </li>
@@ -48,8 +65,14 @@
             <div ui-view style="height:100%">
             </div>
           </div>
+            <div class="search_section" id = 'search_result'>
+            </div>
+
         </div>
       </div>
     </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script>if (window.module) module = window.module;</script>
+
   </body>
 </html>

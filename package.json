@@ -13,6 +13,7 @@
   "devDependencies": {},
   "dependencies": {
     "bower": "^1.8.0",
+    "crawler": "^1.0.5",
     "electron": "^1.6.11",
     "highlight.js": "^9.12.0",
     "marked": "^0.3.6",
